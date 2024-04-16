@@ -9,8 +9,6 @@ image::idta-logo.png[aas-spec-IDTA-01001]
 
 Refer to  the https://industrialdigitaltwin.org[IDTA,window=_blank] for more information on the Asset Administration Shell.
 
-== DRAFT Release 2024-01
-
 [cols="1,1"]
 |===
 a|
@@ -21,17 +19,17 @@ xref:IDTA-01001:ROOT:index.adoc[Part 1: Metamodel, window=_blank,opts=nofollow]
 The Metamodel of the AAS.
 a|
 image::IDTA-01002.png[xref=IDTA-01002-3:ROOT:index.adoc, window=_blank,opts=nofollow,width=300,height=900]
-xref:IDTA-01002-3:ROOT:index.adoc[Part 2: API, window=_blank,opts=nofollow]
+xref:IDTA-01002-3:ROOT:index.adoc[Part 2: Application Programming Interfaces, window=_blank,opts=nofollow]
 
 The API of the AAS.
 a|
 image::IDTA-01003-a.png[xref=IDTA-01003-a:ROOT:index.adoc, window=_blank,opts=nofollow,width=300,height=900]
-xref:IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification IEC61360, window=_blank,opts=nofollow]
+xref:IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC61360, window=_blank,opts=nofollow]
 
 The data specification IEC61360 of the AAS.
 a|
 image::IDTA-01005.png[xref=IDTA-01005:ROOT:index.adoc, window=_blank,opts=nofollow,width=300,height=900]
-xref:IDTA-01005:ROOT:index.adoc[Part 5: AASX, window=_blank,opts=nofollow]
+xref:IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX), window=_blank,opts=nofollow]
 
 The AASX file format of the AAS.
 |===
