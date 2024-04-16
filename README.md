@@ -1,4 +1,5 @@
-# Antora Meta-Repository - Asset Administration Shell (AAS)
+# Antora Meta-Repository - Asset Administration Shell (AAS) 
+
 This is repository contains the structure for building the documentation website for the AAS by [the Industrial Digital Twin Association](https://industrialdigitaltwin.org). This includes the means to generate it on demand by compiling and assembling the respective content from numerous remote repositories and sources written in ascii-doc using [Antora](https://antora.org/).
 
 ## Sources
@@ -21,13 +22,28 @@ The documentation is dynamically generated
     - Go to action [Publish Website](https://github.com/admin-shell-io/aas-specs-antora/actions/workflows/publish.yml)
     - Trigger the action by clicking on "Run Workflow" in the right corner
 
-## Contribution
+## PDF Versions of the Documentation Sources
+The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the following links:
+
+* [Main Page](https://admin-shell-io.github.io/aas-specs-antora/index/dev/the-asset-administration-shell-specification.pdf)
+
+* [Part 1](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/snapshot/draft-part-1-metamodel.pdf)
+
+* [Part 2](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01002-3/snapshot/draft-part-2-api.pdf)
+
+* [Part 3a](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01003-a/snapshot/draft-specification-asset-administration-shell-part-3a-iec61360.pdf)
+
+* [Part 5](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01005/snapshot/draft-specification-asset-administration-shell-part-5-aasx-package-format.pdf)
+
+## Contribution Guidelines
 Contributors should test changes locally before pushing to remote repositories to maintain the integrity of the documentation. If local testing is not feasible, or if you require assistance, please [open an issue](https://github.com/admin-shell-io/aas-specs-antora/issues) for detailed guidance or to request manual build privileges. While direct testing on the live website is possible, it's discouraged due to potential complications. The site is also automatically updated several times a day, allowing for a natural review of changes.
 
 ## Usage
+
 If you wish the set up this environment locally to generate the collective documentation or edit the due process to alter the results in the direction of your needs and desires, this section covers the steps and requirements in the process and aims to guide you broadly to ease the procedure. If you require more assistance or proper documentation along the way, you should make use of the official [Antora documentation](https://docs.antora.org/antora/latest/).
 
 ### Prerequisites
+
 Before proceeding, you are required to have the latest [Node.js LTS release](https://nodejs.org/en/download) installed on your Linux, Windows, or macOS machine. You can then follow the steps [here](https://docs.antora.org/antora/latest/install/install-antora/) to install Antora and set it up.
 
 ### Building Locally
@@ -38,18 +54,11 @@ npx antora generate antora-playbook.yml
 ```
 The generated website should appear under build.
 
-Before this, you may want to run
-
-```
-bundle
-```
-
-if ruby is not set up and you want to generate the pdf files alongside html files.
-
 ### CI/CD Pipeline
 This repository is scheduled to re-build and deploy the website X times a day. This means content from the source repositories are pulled and website is built again accordingly. If documentation changes are pushed to one of the source repositories, it might not appear instantly once they are pushed, you have to wait until the website rebuilds automatically.
 
 ## Managing Antora Specs Documentation
+
 This guide provides a brief overview of how to manage documentation repositories (Doku-Repos) for Antora specs, including adding new repositories, structuring them appropriately, and manually triggering web documentation updates on GitHub.
 
 ### Adding New Documentation Repositories for Antora
