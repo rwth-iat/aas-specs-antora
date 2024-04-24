@@ -1,5 +1,19 @@
 extends: default-for-print
 
+title-page:
+  title:
+    top: 55%
+    font_size: 24
+    font_color: C6C6C6
+    line_height: 0.9
+  subtitle:
+    font_size: 28
+    font_color: FFFFFF
+    font_style: bold_italic
+    line_height: 1
+    
+  background-image: image:cover.png[fit=fill]
+ 
 page:
   layout: portrait
   margin: [0.50in, 0.79in, 0.71in, 0.79in]
@@ -36,12 +50,6 @@ example:
   background_color: #e5f0f7
   padding: 12
   
-title-page: false
-
-cover:
-  front:
-    image: image:media/image1.png[page=1]
-    
 table:
   head:
     font-color: #ffffff
