@@ -23,17 +23,7 @@ The documentation is dynamically generated
     - Trigger the action by clicking on "Run Workflow" in the right corner
 
 ## PDF Versions of the Documentation Sources
-The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the following links:
-
-* [Main Page](https://admin-shell-io.github.io/aas-specs-antora/index/dev/the-asset-administration-shell-specification.pdf)
-
-* [Part 1](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/snapshot/draft-part-1-metamodel.pdf)
-
-* [Part 2](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01002-3/snapshot/draft-part-2-api.pdf)
-
-* [Part 3a](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01003-a/snapshot/draft-specification-asset-administration-shell-part-3a-iec61360.pdf)
-
-* [Part 5](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01005/snapshot/draft-specification-asset-administration-shell-part-5-aasx-package-format.pdf)
+The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the website using the button.
 
 ## Contribution Guidelines
 Contributors should test changes locally before pushing to remote repositories to maintain the integrity of the documentation. If local testing is not feasible, or if you require assistance, please [open an issue](https://github.com/admin-shell-io/aas-specs-antora/issues) for detailed guidance or to request manual build privileges. While direct testing on the live website is possible, it's discouraged due to potential complications. The site is also automatically updated several times a day, allowing for a natural review of changes.
