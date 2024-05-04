@@ -1,6 +1,7 @@
 extends: default-for-print
 
 title-page:
+  text_align: left
   title:
     top: 55%
     font_size: 24
@@ -11,8 +12,7 @@ title-page:
     font_color: FFFFFF
     font_style: bold_italic
     line_height: 1
-    
-  background-image: image:cover.png[fit=fill]
+  background-image: image:cover.pdf[fit=cover]
  
 page:
   layout: portrait
