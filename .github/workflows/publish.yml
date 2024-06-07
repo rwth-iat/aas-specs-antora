@@ -9,7 +9,7 @@ name: Publish Website
 on:
   # Cronjob for publishing
   schedule:
-  - cron: '0 */1 * * *'
+  - cron: '0 */8 * * *'
   # When pushes are made to the main branch
   push:
     branches: [ main ]
