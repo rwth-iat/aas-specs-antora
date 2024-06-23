@@ -9,7 +9,7 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: https://github.com/rwth-iat/aas-specs
+    - url: https://github.com/monsieuremre/aas-specs
       branches: [IDTA-01001-3-0_antora_ref, IDTA-01001-3-1_working]
 
 ui:
