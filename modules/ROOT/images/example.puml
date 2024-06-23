@@ -1,0 +1,51 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide methods
+
+class AssetAdministrationShell<Identifiable\nHasDataSpecification> {
+  +derivedFrom: Reference[0..1] 
+  +assetInformation: AssetInformation 
+  +submodel: Reference[0..*] 
+}
+class AssetInformation {
+  +assetKind: AssetKind 
+  +globalAssetId: Identifier[0..1] 
+  +specificAssetId: SpecificAssetId[0..*] 
+  +assetType: Identifier[0..1] 
+  +defaultThumbnail: Resource[0..1] 
+}
+enum AssetKind <<enumeration>> {
+  Type
+  Instance
+  Role
+  NotApplicable
+}
+class SpecificAssetId<HasSemantics> {
+  +name: LabelType 
+  +value: Identifier 
+  +externalSubjectId: Reference[0..1] 
+}
+class Submodel<Identifiable\nHasKind\nHasSemantics\nQualifiable\nHasDataSpecification> {
+  +submodelElement: SubmodelElement[0..*] 
+}
+class Qualifier<HasSemantics> {
+  +kind: QualifierKind[0..1] 
+  +type: QualifierType 
+  +valueType: DataTypeDefXsd 
+  +value: ValueDataType[0..1] 
+  +valueId: Reference[0..1] 
+}
+abstract class SubmodelElement<Referable\nHasSemantics\nQualifiable\nHasDataSpecification> <<abstract>> {
+}
+class Property<DataElement> {
+  +valueType: DataTypeDefXsd 
+  +value: ValueDataType[0..1] 
+  +valueId: Reference[0..1] 
+}
+AssetAdministrationShell ..> AssetInformation
+AssetInformation ..> AssetKind
+AssetInformation ..> SpecificAssetId
+Submodel ..> SubmodelElement
+AssetAdministrationShell -->"0..*" Submodel : submodel:ref
+AssetAdministrationShell -->"0..1" AssetAdministrationShell : derivedFrom:ref
+@enduml
