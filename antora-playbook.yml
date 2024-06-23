@@ -11,6 +11,7 @@ content:
       start-paths: .
     - url: https://github.com/monsieuremre/aas-specs
       branches: [IDTA-01001-3-0_antora_ref, IDTA-01001-3-1_working]
+      start-paths: documentation/IDTA-01001
 
 ui:
   bundle:
