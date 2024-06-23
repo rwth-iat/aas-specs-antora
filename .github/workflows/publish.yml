@@ -52,6 +52,8 @@ jobs:
       with:
         ruby-version: '3.3'
         bundler-cache: true
+    - name: Install Graphviz
+      run: sudo apt update && sudo apt install -y graphviz
     - name: Generate Site
       run: npx antora antora-playbook.yml
     - name: Upload Artifacts
