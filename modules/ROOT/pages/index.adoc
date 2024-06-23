@@ -4,6 +4,11 @@
 
 image::idta-logo.png[aas-spec-IDTA-01001]
 
+[plantuml, example, svg]
+....
+include::image$example.puml[]
+....
+
 &nbsp;
 
 :part-1-mainpage: IDTA-01001:ROOT:index.adoc
