@@ -1,6 +1,6 @@
 site:
   title: Asset Administration Shell Documentation
-  url: https://admin-shell-io.github.io/aas-specs-antora
+  url: https://rwth-iat.github.io/aas-specs-antora
   start_page: index::index.adoc
 
 content:
@@ -9,22 +9,12 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: https://github.com/admin-shell-io/aas-specs
+    - url: https://github.com/rwth-iat/aas-specs
       branches: [IDTA-01001-3-0_antora_ref, IDTA-01001-3-1_working]
-      start-paths: documentation/IDTA-01001
-    - url: https://github.com/admin-shell-io/aas-specs-api
-      branches: [IDTA-01002-3-0_antora_ref, IDTA-01002-3-1_preparation]
-      start-paths: documentation/IDTA-01002-3
-    - url: https://github.com/admin-shell-io/aas-specs-iec61360
-      branches: [IDTA-01003-a-3-0_antora_ref, IDTA-01003-a-3-1_working]
-      start-paths: documentation/IDTA-01003-a
-    - url: https://github.com/admin-shell-io/aas-specs-aasx
-      branches: [IDTA-01005-3-0_antora_ref, IDTA-01005-3-1_working]
-      start-paths: documentation/IDTA-01005
 
 ui:
   bundle:
-    url: https://github.com/admin-shell-io/aas-specs-antora-ui/releases/latest/download/ui-bundle.zip
+    url: https://github.com/rwth-iat/aas-specs-antora-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
   supplemental_files:
   - path: ui.yml
