@@ -200,23 +200,27 @@ In this document, two submodels are defined – one submodel for module type, i.
 
 For the Submodel instance, these attributes need to be set:
 
-[width="100%",cols="25%,50%,19%,6%",options="header",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* a|
+
+|*idShort:* |
+
 ModuleTypePackage
 
 Note: The above idShort shall always be as stated.
 
-| |
-|*Class:* |Submodel | |
-|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPSubmodel | |
-|*Kind:* |Instance | |
-|*Version:* |1 | |
-|*Revision:* |1 | |
-|*Parent* |Asset Administration Shell with module type as asset | |
-|*Explanation:* |The submodel defines an entrypoint to a MTP environment containing an embedded MTP file as SubmodelElement | |
-|*idShort* |*Description@en* |*example* |*card.*
-a|
+|*Class:* | Submodel 
+|*semanticId* | [IRI]https://admin-shell.io/vdi/2658/1/0/MTPSubmodel 
+|*Kind:* | Instance 
+|*Version:* | 1 
+|*Revision:* | 1 
+|*Parent* | Asset Administration Shell with module type as asset 
+|*Explanation:* | The submodel defines an entrypoint to a MTP environment containing an embedded MTP file as SubmodelElement 
+|===
+[%autowidth, width="100%", options="header",]
+|===
+|*idShort* |*Description@en* |*example* |*card.* a|
 {empty}[File]
 
 MTPFile
@@ -253,19 +257,22 @@ Collection containing references to documentation documents which are associated
 
 The the submodel instance this attribute needs to be set
 
-[width="100%",cols="17%,46%,28%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
 |*idShort:* a|
 MTPReferences
 
 Note, that the idShort can be chosen freely to match the needs of included MTPRefernces e.g. “DocumentationReferences” or “BOMReferenes”
 
-| |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId:* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPReferences | |
-|*Parent:* |Submodel with idShort = ModuleTypePackage and respective semanticId or Submodel with idShort = ModuleInstance and respective semanticId | |
-|*Explanation:* |This SubmodelElementCollection holds references to elements from other submodels, e.g. included into VDI 2770 documentation submodel | |
-|*[SME type]* |*semanticId = [idType]value* | |*card.*
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId:* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPReferences 
+|*Parent:* |Submodel with idShort = ModuleTypePackage and respective semanticId or Submodel with idShort = ModuleInstance and respective semanticId 
+|*Explanation:* |This SubmodelElementCollection holds references to elements from other submodels, e.g. included into VDI 2770 documentation submodel 
+|*[SME type]* |*semanticId = [idType]value* | |*card.* |
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*idShort* |*Description@en* |*example* |
 a|
 {empty}[RelationshipElement]
@@ -311,20 +318,20 @@ MTPReferences are used to connect elements of other submodels with internal elem
 
 For the submodel instance, these attributes need to be set:
 
-[width="100%",cols="24%,51%,19%,6%",options="header",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
 |*idShort:* a|
 ProcessEquipmentAssembly
 
 Note: The above idShort shall always be as stated.
 
-| |
-|*Class:* |Submodel | |
-|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/PEASubmodel | |
-|*Kind:* |Instance | |
-|*Version:* |1 | |
-|*Revision:* |1 | |
-|*Parent* |Asset Administration Shell with module instance as asset | |
+|*Class:* |Submodel 
+|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/PEASubmodel 
+|*Kind:* |Instance 
+|*Version:* |1 
+|*Revision:* |1 
+|*Parent* |Asset Administration Shell with module instance as asset 
 |*Explanation:* a|
 The submodel defines a set of PEA-properties specific to module instance
 
@@ -332,7 +339,9 @@ Furthermore, we assume that the AAS of the PEA is referencing the AAS of module 
 
 In exception cases where no AAS of MTP is available, this submodel can also contain the MTPFile directly as defined in Section 2.2. In this case the MTPFile can be accessed two times, the MTP file of the submodel instance shadows the MTPFile contained in ModuleTypePackage submodel of referenced AAS.
 
-| |
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
@@ -404,13 +413,17 @@ SourceList
 
 === Submodel Elements of SourceList Collection
 
-[width="100%",cols="24%,51%,19%,6%",options="header",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* |SourceList | |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPSUCLib/CommunicationSet/SourceList | |
-|*Parent* |Submodel with idShort ProcessEquipmentAssembly and respective semanticId | |
-|*Explanation:* |This SMC contains descriptions to OPC UA servers of process equipment assembly | |
+|*idShort:* |SourceList 
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPSUCLib/CommunicationSet/SourceList 
+|*Parent* |Submodel with idShort ProcessEquipmentAssembly and respective semanticId 
+|*Explanation:* |This SMC contains descriptions to OPC UA servers of process equipment assembly 
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
@@ -425,13 +438,17 @@ Example for idShort could be “FreelanceOPCUA“
 
 === Submodel Elements of OPCUAServer-type Collection
 
-[width="100%",cols="15%,55%,24%,6%",options="header",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* |\{arbitrary} | |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPCommunicationSUCLib/ServerAssembly/OPCUAServer | |
-|*Parent* |SMC with SourceList idshort and respective semanticId | |
-|*Explanation:* |This SMC contains endpoints of OPC UA servers | |
+|*idShort:* |\{arbitrary} 
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId* |[IRI]https://admin-shell.io/vdi/2658/1/0/MTPCommunicationSUCLib/ServerAssembly/OPCUAServer 
+|*Parent* |SMC with SourceList idshort and respective semanticId 
+|*Explanation:* |This SMC contains endpoints of OPC UA servers 
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
