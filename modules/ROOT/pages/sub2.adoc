@@ -116,81 +116,62 @@ Figure 2: UML class diagram of the Submodel
 
 Note that “card.” denotes cardinality which should be interpreted as the “multiplicity” concept known from UML.
 
-[width="99%",cols="2%,14%,,50%,,25%,,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* | a|
+|*idShort:* |
 DEXPI
 
 Note: the above idShort can differ from proposed “DEXPI” idShort, in order to enable multiple Submodels for an asset, e.g., inherited DEXPI files from higher-level Submodel templates or assets.
 
-| | | | |
-|*Class:* | |Submodel (SM) | | | | |
-|*semanticId:* | |[IRI] https://admin-shell.io/idta/DEXPI/1/0/Submodel | | | | |
-|*Parent:* | |Asset Administration Shell with asset which is a plant segment the DEXPI file belongs to. | | | | |
-|*Explanation:* | |Submodel containing one or multiple DEXPI models for the asset. | | | | |
-|*[SME type]* | |*semanticId = [idType]value* | |*[valueType]* | |*card.* |
-|*idShort* | |*Description@en* | |*example* | | |
-| | | | | | | |
-a|
-{empty}[SMC]
+|*Class:* | Submodel (SM) 
+|*semanticId:* | [IRI] https://admin-shell.io/idta/DEXPI/1/0/Submodel 
+|*Parent:* |Asset Administration Shell with asset which is a plant segment the DEXPI file belongs to. 
+|*Explanation:* | Submodel containing one or multiple DEXPI models for the asset. 
+|===
+[%autowidth, width="100%", options="header",]
+|===
+|*[SME type]* | *semanticId = [idType]value* |*[valueType]* |*card.* 
+|*idShort* |*Description@en* |*example* | |
+{empty}[SMC] PlantMetadata |
 
-PlantMetadata
-
-| a|
 [IRI] https://admin-shell.io/idta/DEXPI/1/0/PlantMetadata
 
 Container for the metadata of the plant segment which is described by the supplied DEXPI file
 
-| |n/a | |1 |
-a|
-{empty}[SMC]
+| n/a |1 |
+{empty}[SMC] Model\{00} |
 
-Model\{00}
-
-| a|
 [IRI] https://admin-shell.io/idta/DEXPI/1/0/Model
 
 Container for the actual DEXPI file, its metadata and its mapping directory.
 
 Note that \{00} a running counter suffix, e.g., “Model01” for the first element i.e. first DEXPI model and so on (“Model01”, “Model02”, “Model03”, …) in the case of multiple models included in the submodel.
 
-| |n/a | |1..* |
-|===
-
-=== 
-
-[width="100%",cols="17%,52%,22%,9%",]
-|===
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
+| n/a |1..* |
 |===
 
 === Properties of the SMC PlantMetadata
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* a|
+|*idShort:* |
 PlantMetadata
 
 Note: the above idShort shall always be as stated.
 
-| |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/PlantMetadata | |
-|*Parent:* |Submodel with semanticId = https://admin-shell.io/idta/DEXPI/1/0/Submodel | |
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/PlantMetadata 
+|*Parent:* |Submodel with semanticId = https://admin-shell.io/idta/DEXPI/1/0/Submodel 
 |*Explanation:* a|
 Metadata attributes of the plant or plant segment. It includes a subset of generic DEXPI Package Metadata (section 5 of the DEXPI specification) plus some additional optional elements.
 
 Note: we keep all attributes optional due they optional definition in the DEXPI specification.
+|===
+[%autowidth, width="100%", options="header",]
+|===
 
-| |
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
@@ -597,13 +578,17 @@ a|
 
 ===  Properties of the SMC Model\{00}
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* |Model\{00} | |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/Model | |
-|*Parent:* |Submodel with semanticId = https://admin-shell.io/idta/DEXPI/1/0/Submodel | |
-|*Explanation:* |Container for a single DEXPI model. | |
+|*idShort:* |Model\{00} 
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/Model 
+|*Parent:* |Submodel with semanticId = https://admin-shell.io/idta/DEXPI/1/0/Submodel 
+|*Explanation:* |Container for a single DEXPI model.
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
@@ -668,18 +653,21 @@ Directory with model-specific mappings
 
 ===  Properties of the SMC ModelMetadata
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|*idShort:* a|
+|*idShort:* |
 ModelMetadata
 
 Note: the above idShort shall always be as stated.
 
-| |
-|*Class:* |SubmodelElementCollection (SMC) | |
-|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/Model | |
-|*Parent:* |Submodel with idShort = Model\{00} | |
-|*Explanation:* |Metadata container for a single DEXPI model. This is a subset of generic DEXPI Package Metadata (section 5 of the specification). | |
+|*Class:* |SubmodelElementCollection (SMC) 
+|*semanticId:* |[IRI] https://admin-shell.io/idta/DEXPI/1/0/Model 
+|*Parent:* |Submodel with idShort = Model\{00} 
+|*Explanation:* |Metadata container for a single DEXPI model. This is a subset of generic DEXPI Package Metadata (section 5 of the specification). 
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |*[SME type]* |*semanticId = [idType]value* |*[valueType]* |*card.*
 |*idShort* |*Description@en* |*example* |
 a|
@@ -858,18 +846,22 @@ http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[2026-04-02]
 
 ===  http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Properties of the SMC MappingDirectory]
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort:*] a|
 http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[MappingDirectory]
 
 http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Note: the above idShort shall always be as stated.]
 
-| |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/MappingDirectory] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = Model\{00}] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Container for local-global mappings within the DEXPI model] | |
+
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/MappingDirectory] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = Model\{00}] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Container for local-global mappings within the DEXPI model]
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[SME type]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId = [idType]value*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[valueType]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*card.*]
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Description@en*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*example*] |
 a|
@@ -902,13 +894,17 @@ http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[TagMapping SMC element
 
 http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Tagged elements&#44; e.g.&#44; “Equipment” elements&#44; having a “TagNameAssignmentClass” DEXPI attribute&#44; an example is “PlateHeatExchanger” used in the example table below. In this case the TagName property corresponds to the value of tag name assignment.“ProcessInstrumentationFunction” elements within the DEXPI model describing process instrumentation&#44; in this case the TagName property corresponds to the DEXPI attribute values of "ProcessInstrumentationFunctionNumberAssignmentClass" DEXPI attributes of the respective element&#44; e.g.&#44; 4712.01 for an element with local ID “ProcessInstrumentationFunction-1” within the example DEXPI file.]
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[\{LocalId within DEXPI}] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/TagMapping] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = MappingDirectory] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Collection describing tag information] | |
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[\{LocalId within DEXPI}] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/TagMapping] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = MappingDirectory] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Collection describing tag information] 
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[SME type]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId = [idType]value*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[valueType]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*card.*]
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Description@en*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*example*] |
 a|
@@ -999,13 +995,17 @@ http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[(Asset) (no-local) [id
 
 http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[The second kind of SMC within the mapping directory describes the subtag capturing objects having a “SubTagNameAssignmentClass” DEXPI attribute.]
 
-[width="100%",cols="17%,52%,22%,9%",]
+[.table-with-appendix-table]
+[%autowidth, width="100%", cols="h,d",]
 |===
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[\{LocalId within DEXPI}] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/Metadata/SubTagMapping] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = MappingDirectory] | |
-|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Collection describing subtag information] | |
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[\{LocalId within DEXPI}] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Class:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SubmodelElementCollection (SMC)] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[[IRI] https://admin-shell.io/idta/DEXPI/1/0/Metadata/SubTagMapping] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Parent:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[SMC with idShort = MappingDirectory] 
+|http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Explanation:*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[Collection describing subtag information] 
+|===
+[%autowidth, width="100%", options="header",]
+|===
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[SME type]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*semanticId = [idType]value*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*[valueType]*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*card.*]
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*idShort*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*Description@en*] |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[*example*] |
 a|
@@ -1113,21 +1113,6 @@ http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[(Asset) (no-local) [id
 
 |http://sandbox.dexpi.org/rdl/ArchiveNumberAssignmentClass[1]
 |===
-
-[width="100%",cols="17%,52%,22%,9%",]
-|===
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-| | | |
-|===
-
-== 
 
 [width="100%",cols="22%,78%",options="header",]
 |===
