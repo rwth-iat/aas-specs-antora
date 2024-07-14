@@ -1,4 +1,9 @@
+.xref:specs.adoc[Specification of the Asset Administration Shell]
 * xref:IDTA-01001:ROOT:index.adoc[Part 1: Metamodel]
-// * xref:IDTA-01002:ROOT:index.adoc[Part 2: Application Programming Interfaces]
-// * xref:IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC 61360]
-// * xref:IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX)]
+* xref:IDTA-01002:ROOT:index.adoc[Part 2: Application Programming Interfaces]
+* xref:IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC 61360]
+* xref:IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX)]
+
+.xref:submodels.adoc[Submodel Templates of the Asset Administration Shell]
+* xref:sub1.adoc[Inclusion of Module Type Package (MTP) Data into Asset Administration Shell]
+* xref:sub2.adoc[Information Model for P&I Diagrams based on DEXPI Standard]
