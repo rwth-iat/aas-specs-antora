@@ -23,17 +23,7 @@ The documentation is dynamically generated
     - Trigger the action by clicking on "Run Workflow" in the right corner
 
 ## PDF Versions of the Documentation Sources
-The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the following links:
-
-* [Main Page](https://admin-shell-io.github.io/aas-specs-antora/index/dev/the-asset-administration-shell-specification.pdf)
-
-* [Part 1](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01001/snapshot/draft-part-1-metamodel.pdf)
-
-* [Part 2](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01002-3/snapshot/draft-part-2-api.pdf)
-
-* [Part 3a](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01003-a/snapshot/draft-specification-asset-administration-shell-part-3a-iec61360.pdf)
-
-* [Part 5](https://admin-shell-io.github.io/aas-specs-antora/IDTA-01005/snapshot/draft-specification-asset-administration-shell-part-5-aasx-package-format.pdf)
+The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the website using the button.
 
 ## Contribution Guidelines
 Contributors should test changes locally before pushing to remote repositories to maintain the integrity of the documentation. If local testing is not feasible, or if you require assistance, please [open an issue](https://github.com/admin-shell-io/aas-specs-antora/issues) for detailed guidance or to request manual build privileges. While direct testing on the live website is possible, it's discouraged due to potential complications. The site is also automatically updated several times a day, allowing for a natural review of changes.
@@ -103,6 +93,13 @@ docs/
 ```
 
 For a comprehensive guide on structuring your documentation for Antora, see [Antora's official documentation on directory structure](https://docs.antora.org/antora/latest/standard-directories/).
+
+## The PDF Files
+We use the antora/pdf-extension to generate PDF files alongside the web pages. We use our own [PDF Theme](pdf-theme.yml) to define our style and structure. The configuration file for the PDF generation process is the [antora-assembler.yml](antora-assembler.yml).
+
+The cover pages of these PDF files are not readily provided images. Tho, we use an [image on our cover pages](cover.pdf) as the background. Our goal is to embed as little as possible as part of this image. Document properties like the title, subtitle, date, author, etc. are displayed as text on top of this background image.
+
+We use a custom extension written in ruby. This can be seen in the file [extended.rb](extended.rb). This file is taken from the extension examples from the asciidoctor-pdf repository. If numbering of paragraphs is no longer required, this can be disabled by editing the [antora-assembler.yml](antora-assembler.yml). Deleting the option ```-r ./extended.rb``` after the command will disable this extension. Numbering of paragraphs is mainly for debug and review purposes.
 
 ## License
 This project is under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
