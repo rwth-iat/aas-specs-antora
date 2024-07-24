@@ -21,10 +21,10 @@ content:
     - url: https://github.com/admin-shell-io/aas-specs-aasx
       branches: [IDTA-01005-3-0_antora_ref, IDTA-01005-3-1_working]
       start-paths: documentation/IDTA-01005
-    - url: https://github.com/admin-shell-io/aas-specs-mock
+    - url: https://github.com/rwth-iat/aas-specs-mock
       branches: [main]
       start-paths: 1/documentation/IDTA-02036
-    - url: https://github.com/admin-shell-io/aas-specs-mock
+    - url: https://github.com/rwth-iat/aas-specs-mock
       branches: [main]
       start-paths: 2/documentation/IDTA-02036
       
