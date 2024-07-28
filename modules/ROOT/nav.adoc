@@ -1,14 +1,8 @@
 .xref:specs.adoc[Specification of the Asset Administration Shell]
 * Example Release 2024-01-01
-** xref:v3.0@IDTA-01001:ROOT:index.adoc[Part 1:Metamodel]
+** xref:v3.0@IDTA-01001:ROOT:index.adoc[Part 1: Metamodel]
 ** xref:v3.1@IDTA-01002:ROOT:index.adoc[Part 2: Application Programming Interfaces]
 ** xref:v3.1@IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC 61360]
-** xref:v3.0@IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX)]
-
-* Example Release 2024-07-01
-** xref:v3.1@IDTA-01001:ROOT:index.adoc[Part 1: Metamodel]
-** xref:v3.0@IDTA-01002:ROOT:index.adoc[Part 2: Application Programming Interfaces]
-** xref:v3.0@IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC 61360]
 ** xref:v3.0@IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX)]
 
 * All Versions
@@ -17,6 +11,10 @@
 ** xref:IDTA-01003-a:ROOT:index.adoc[Part 3a: Data Specification - IEC 61360]
 ** xref:IDTA-01005:ROOT:index.adoc[Part 5: Package File Format (AASX)]
 
+* PUML Testing
+** xref:part1puml:ROOT:index.adoc[Part 1: Metamodel - PUML]
+
 .xref:submodels.adoc[Submodel Templates of the Asset Administration Shell]
-* xref:sub1.adoc[Inclusion of Module Type Package (MTP) Data into Asset Administration Shell]
-* xref:sub2.adoc[Information Model for P&I Diagrams based on DEXPI Standard]
+** xref:dexpi:ROOT:index.adoc[Information Model for P&I Diagrams based on DEXPI Standard]
+** xref:mtp:ROOT:index.adoc[Inclusion of Module Type Package (MTP) Data into Asset Administration Shell]
+** xref:nametemplate:ROOT:index.adoc[Nametemplate for Software in Manufacturing]
