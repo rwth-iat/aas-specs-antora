@@ -38,6 +38,7 @@ content:
       branches:
       - patch-1
       start-paths:
+      - reliability
       - dexpi
       - mtp
       - nametemplate
