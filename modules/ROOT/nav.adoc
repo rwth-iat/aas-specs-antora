@@ -18,3 +18,4 @@
 ** xref:dexpi:ROOT:index.adoc[Information Model for P&I Diagrams based on DEXPI Standard]
 ** xref:mtp:ROOT:index.adoc[Inclusion of Module Type Package (MTP) Data into Asset Administration Shell]
 ** xref:nametemplate:ROOT:index.adoc[Nametemplate for Software in Manufacturing]
+** xref:reliability:ROOT:index.adoc[Reliability]
