@@ -1,0 +1,164 @@
+@startuml
+!$THEME = "idta"
+
+!$BLACK  = "#000121"
+!$BLUE   = "#1F39E3"
+!$LIGHTBLUE   = "#E5F0F7"
+
+!$ORANGE = "#F43F00"
+!$RED    = "#DB252B"
+!$WHITE  = "#FFFFFF"
+!$GREY  = "#e1e1e1"
+
+!$BGCOLOR = $GREY
+!$FGCOLOR = $BLUE
+!$FONTCOLOR = $BLACK
+
+
+!ifndef $FONT_NAME
+  !$FONT_NAME = "SansSerif"
+!endif
+
+!ifndef $FONT_NAME_MONOSPACED
+  !$FONT_NAME_MONOSPACED = "Courier"
+!endif
+
+<style>
+  root {
+    BackgroundColor $BGCOLOR
+    FontColor $FONTCOLOR
+    FontName $FONT_NAME
+    HyperLinkColor $ORANGE
+    LineColor $FGCOLOR
+    LineThickness 1
+    Margin 5
+  }
+  document {
+    caption {
+      LineThickness 0
+    }
+    footer {
+      LineThickness 0
+    }
+    header {
+      LineThickness 0
+    }
+    title {
+      FontSize 22
+      LineThickness 0
+    }
+  }
+  group {
+    BackGroundColor Transparent
+  }
+  groupHeader {
+    BackgroundColor $FGCOLOR
+    FontColor $WHITE
+    FontStyle bold
+  }
+  node {
+    MaximumWidth 300
+  }
+  referenceHeader {
+    BackgroundColor $FGCOLOR
+    FontColor $FONTCOLOR
+    FontStyle bold
+  }
+  separator {
+    BackgroundColor $FGCOLOR
+    FontColor $FONTCOLOR
+    FontStyle bold
+  }
+</style>
+
+skinparam classAttributeIconSize 0
+skinparam ArrowLollipopColor $FGCOLOR
+skinparam ArrowColor $ORANGE
+skinparam BackgroundColor $WHITE
+skinparam DefaultFontName $FONT_NAME
+skinparam DefaultMonospacedFontName $FONT_NAME_MONOSPACED
+skinparam LifelineStrategy nosolid
+skinparam ParticipantPadding 10
+skinparam SequenceLifeLineBorderColor $FGCOLOR
+skinparam Shadowing false
+skinparam UseBetaStyle true
+
+skinparam Activity {
+  BackgroundColor $BGCOLOR
+  BarColor $FGCOLOR
+  BorderColor $FGCOLOR
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam Boundary {
+  FontColor $FONTCOLOR
+}
+skinparam Box {
+  Padding 5
+}
+skinparam CircledCharacter {
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME_MONOSPACED
+  Radius 9
+}
+skinparam Class {
+  BackgroundColor $BGCOLOR
+  BorderColor $FGCOLOR
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam ClassAttribute {
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam ClassStereotype {
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam Footer {
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam Header {
+  FontColor $FONTCOLOR
+  FontName $FONT_NAME
+}
+skinparam Hyperlink {
+  Color $ORANGE
+}
+skinparam IconPackage {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconPrivate {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconProtected {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam IconPublic {
+  Color $FGCOLOR
+  BackgroundColor $BGCOLOR
+}
+skinparam Note {
+  FontColor $FONTCOLOR
+  BackgroundColor $LIGHTBLUE
+}
+skinparam Object {
+  BorderColor $FGCOLOR
+}
+skinparam Package {
+  BorderColor $FGCOLOR
+  FontColor $FONTCOLOR
+}
+skinparam State {
+  BackgroundColor $BGCOLOR
+  BorderColor $FGCOLOR
+}
+skinparam SequenceBox {
+  BackgroundColor $GREY
+}
+
+hide empty members
