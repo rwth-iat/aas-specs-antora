@@ -9,10 +9,9 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: https://github.com/admin-shell-io/aas-specs
+    - url: https://github.com/rwth-iat/aas-specs
       branches:
-      - IDTA-01001-3-0_antora_ref
-      - IgGa/integrate_pumls
+      - IgGa/integrate_pumls_test
       start-paths: documentation/IDTA-01001
     - url: https://github.com/admin-shell-io/aas-specs-api
       branches:
