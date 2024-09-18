@@ -64,6 +64,7 @@ antora:
 
 asciidoc:
   extensions:
-    - asciidoctor-kroki
+  - asciidoctor-plantuml
   attributes:
+    :plantuml-server-url: http://www.plantuml.com/plantuml
     xrefstyle: short
