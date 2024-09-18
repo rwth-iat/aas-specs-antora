@@ -50,5 +50,7 @@ antora:
     - '@antora/pdf-extension'
 
 asciidoc:
+  extensions:
+    - asciidoctor-kroki
   attributes:
     xrefstyle: short
