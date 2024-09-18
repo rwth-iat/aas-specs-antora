@@ -40,6 +40,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
+    - name: Setup java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
     - name: Install Antora
       run: npm i antora
     - name: Setup Ruby
@@ -47,6 +52,8 @@ jobs:
       with:
         ruby-version: '3.3'
         bundler-cache: true
+    - name: Install Graphviz
+      run: sudo apt update && sudo apt install -y graphviz
     - name: Generate Site
       run: npx antora antora-playbook.yml
     - name: Upload Artifacts
