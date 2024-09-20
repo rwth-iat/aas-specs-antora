@@ -1,6 +1,6 @@
 site:
   title: Asset Administration Shell Documentation
-  url: https://admin-shell-io.github.io/aas-specs-antora
+  url: https://rwth-iat.github.io/aas-specs-antora
   start_page: index::index.adoc
 
 content:
@@ -9,30 +9,25 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: https://github.com/admin-shell-io/aas-specs
-      branches: [ IDTA-01001-3-0_antora_ref,
-                  IDTA-01001-3-0-1_antora_ref,
-                  IDTA-01001-3-1_working ]
-      start-paths: documentation/IDTA-01001
-    - url: https://github.com/admin-shell-io/aas-specs-api
-      branches: [ IDTA-01002-3-0_antora_ref,
-                  IDTA-01002-3-0-2_antora_ref,
-                  IDTA-01002-3-1_preparation ]
-      start-paths: documentation/IDTA-01002-3
-    - url: https://github.com/admin-shell-io/aas-specs-iec61360
-      branches: [ IDTA-01003-a-3-0_antora_ref,
-                  IDTA-01003-a-3-0-2_antora_ref,
-                  IDTA-01003-a-3-1_working ]
-      start-paths: documentation/IDTA-01003-a
-    - url: https://github.com/admin-shell-io/aas-specs-aasx
-      branches: [ IDTA-01005-3-0_antora_ref,
-                  IDTA-01005-3-0-1_antora_ref,
-                  IDTA-01005-3-1_working ]
       start-paths: documentation/IDTA-01005
-
+    - url: https://github.com/rwth-iat/aas-specs-mock
+      branches: [master]
+      start-paths:
+      - 1/documentation/IDTA-02036
+      - 2/documentation/IDTA-02036
+    - url: https://github.com/monsieuremre/aas-specs-mock
+      branches:
+      - patch-1
+      start-paths:
+      - reliability
+      - dexpi
+      - mtp
+      - nametemplate
+      - part1_puml
+      
 ui:
   bundle:
-    url: https://github.com/admin-shell-io/aas-specs-antora-ui/releases/latest/download/ui-bundle.zip
+    url: https://github.com/rwth-iat/aas-specs-antora-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
   supplemental_files:
     - path: ui.yml
@@ -52,5 +47,7 @@ antora:
 asciidoc:
   extensions:
     - asciidoctor-kroki
+    - asciidoctor-plantuml
   attributes:
+    :plantuml-server-url: http://www.plantuml.com/plantuml
     xrefstyle: short

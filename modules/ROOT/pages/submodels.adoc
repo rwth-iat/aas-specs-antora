@@ -1,0 +1,3 @@
+= Submodels of the Asset Administration Shell
+
+**Welcome to the documentation of various submodels of the Asset Administration Shell**

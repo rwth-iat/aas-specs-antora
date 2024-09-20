@@ -1,0 +1,41 @@
+= Specification of the Asset Administration Shell
+
+**Welcome to the home of the specification of the Asset Administration Shell**
+
+image::idta-logo.png[aas-spec-IDTA-01001]
+
+&nbsp;
+
+:part-1-mainpage: IDTA-01001:ROOT:index.adoc
+:part-2-mainpage: IDTA-01002:ROOT:index.adoc
+:part-3a-mainpage: IDTA-01003-a:ROOT:index.adoc
+:part-5-mainpage: IDTA-01005:ROOT:index.adoc
+
+
+Refer to  the https://industrialdigitaltwin.org[IDTA,window=_blank] for more information on the Asset Administration Shell.
+
+[cols="1,1"]
+|===
+a|
+image::IDTA-01001.png[xref={part-1-mainpage}, window=_blank,opts=nofollow,width=300,height=900]
+xref:{part-1-mainpage}[Part 1: Metamodel, window=_blank,opts=nofollow]
+
+
+The Metamodel of the AAS.
+a|
+image::IDTA-01002.png[xref={part-2-mainpage}, window=_blank,opts=nofollow,width=300,height=900]
+xref:{part-2-mainpage}[Part 2: Application Programming Interfaces, window=_blank,opts=nofollow]
+
+The API of the AAS.
+a|
+image::IDTA-01003-a.png[xref={part-3a-mainpage}, window=_blank,opts=nofollow,width=300,height=900]
+xref:{part-3a-mainpage}[Part 3a: Data Specification - IEC61360, window=_blank,opts=nofollow]
+
+The data specification IEC61360 of the AAS.
+a|
+image::IDTA-01005.png[xref={part-5-mainpage}, window=_blank,opts=nofollow,width=300,height=900]
+xref:{part-5-mainpage}[Part 5: Package File Format (AASX), window=_blank,opts=nofollow]
+
+The AASX file format of the AAS.
+|===
+&nbsp;
