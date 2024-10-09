@@ -67,3 +67,4 @@ asciidoc:
     - asciidoctor-kroki
   attributes:
     xrefstyle: short
+    kroki-fetch-diagram: true
