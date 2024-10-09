@@ -60,7 +60,6 @@ runtime:
 antora:
   extensions:
   - '@antora/lunr-extension'
-  - '@antora/pdf-extension'
 
 asciidoc:
   extensions:
