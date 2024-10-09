@@ -68,4 +68,4 @@ asciidoc:
   attributes:
     xrefstyle: short
     kroki-fetch-diagram: true
-    theme: idta from https://raw.githubusercontent.com/admin-shell-io/aas-specs-antora/main/plantuml/
+    kroki-plantuml-include: https://raw.githubusercontent.com/rwth-iat/aas-specs/refs/heads/IgGa/test_pumls/documentation/IDTA-01001/modules/ROOT/partials/diagrams/000_theme_conf.puml
