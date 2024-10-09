@@ -9,30 +9,10 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: https://github.com/rwth-iat/aas-specs
+    - url: https://github.com/admin-shell-io/aas-specs
       branches:
-      - IgGa/integrate_pumls_test
+      - IDTA-01001-3-1_working
       start-paths: documentation/IDTA-01001
-    - url: https://github.com/admin-shell-io/aas-specs-api
-      branches:
-      - IDTA-01002-3-0_antora_ref
-      - IgGa/integrate_pumls
-      start-paths: documentation/IDTA-01002-3
-    - url: https://github.com/admin-shell-io/aas-specs-iec61360
-      branches:
-      - IDTA-01003-a-3-0_antora_ref
-      - IDTA-01003-a-3-1_working
-      start-paths: documentation/IDTA-01003-a
-    - url: https://github.com/admin-shell-io/aas-specs-aasx
-      branches:
-      - IDTA-01005-3-0_antora_ref
-      - IDTA-01005-3-1_working
-      start-paths: documentation/IDTA-01005
-    - url: https://github.com/rwth-iat/aas-specs-mock
-      branches: [master]
-      start-paths:
-      - 1/documentation/IDTA-02036
-      - 2/documentation/IDTA-02036
     - url: https://github.com/monsieuremre/aas-specs-mock
       branches:
       - patch-1
@@ -41,7 +21,6 @@ content:
       - dexpi
       - mtp
       - nametemplate
-      - part1_puml
       
 ui:
   bundle:
