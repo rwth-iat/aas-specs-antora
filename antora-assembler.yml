@@ -4,6 +4,3 @@ asciidoc:
   attributes:
     source-highlighter: rouge
     pdf-theme: pdf-theme.yml
-build:
-  command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-diagram
-  keep_aggregate_source: true
