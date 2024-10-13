@@ -1,4 +1,3 @@
-.xref:specs.adoc[Specification of the Asset Administration Shell]
 * Example Release 2024-01-01
 ** xref:v3.0@IDTA-01001:ROOT:index.adoc[Part 1: Metamodel]
 ** xref:v3.1@IDTA-01002:ROOT:index.adoc[Part 2: Application Programming Interfaces]
@@ -13,9 +12,3 @@
 
 * PUML Testing
 ** xref:part1puml:ROOT:index.adoc[Part 1: Metamodel - PUML]
-
-.xref:submodels.adoc[Submodel Templates of the Asset Administration Shell]
-** xref:dexpi:ROOT:index.adoc[Information Model for P&I Diagrams based on DEXPI Standard]
-** xref:mtp:ROOT:index.adoc[Inclusion of Module Type Package (MTP) Data into Asset Administration Shell]
-** xref:nametemplate:ROOT:index.adoc[Nametemplate for Software in Manufacturing]
-** xref:reliability:ROOT:index.adoc[Reliability]
