@@ -33,15 +33,6 @@ content:
       start-paths:
       - 1/documentation/IDTA-02036
       - 2/documentation/IDTA-02036
-    - url: https://github.com/monsieuremre/aas-specs-mock
-      branches:
-      - patch-1
-      start-paths:
-      - reliability
-      - dexpi
-      - mtp
-      - nametemplate
-      - part1_puml
       
 ui:
   bundle:
