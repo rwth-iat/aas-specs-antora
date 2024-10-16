@@ -54,4 +54,5 @@ asciidoc:
     - asciidoctor-kroki
   attributes:
     xrefstyle: short
+    kroki-server-url: http://localhost:8000
     kroki-fetch-diagram: true
