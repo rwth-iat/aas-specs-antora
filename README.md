@@ -37,12 +37,25 @@ If you wish the set up this environment locally to generate the collective docum
 Before proceeding, you are required to have the latest [Node.js LTS release](https://nodejs.org/en/download) installed on your Linux, Windows, or macOS machine. You can then follow the steps [here](https://docs.antora.org/antora/latest/install/install-antora/) to install Antora and set it up.
 
 ### Building Locally
-In order to locally build the documentation website on your own, you have to make sure you have Antora CLI installed on your machine first. You can then continue with cloning this repository. All you have to do is run the following commands in order:
-```
-npm i
-npx antora generate antora-playbook.yml
-```
-The generated website should appear under build.
+
+#### Prerequisites and Preliminary Steps
+* A prerequisite is having the latest Node.js LTS release on your Linux, Windows, or macOS machine. For reproducability and ease of use, please use Linux, MacOS or another Unix-like system. If you are on windows, consider using WSL. Directly running on windows might prove more difficult and tedious, since no package manager will be available for any of the following steps. See [here](https://nodejs.org/en/download/package-manager) for instructions.
+
+* In order to locally build the documentation website on your own, you have to make sure you have Antora command line interface (CLI) and the official Antora site generator installed. See [here](https://docs.antora.org/antora/latest/install/install-antora/) for instructions.
+
+* In the following steps, Ruby will be required. Install ruby on your system and configure it for use for a non-root user. See [here](https://www.ruby-lang.org/en/downloads/) for instructions.
+
+* Rendering puml files into images for pdf files will require Graphviz to be installed on the system. If you are on linux, your package manager most probably has it and you can easily install it.  See [here](https://www.ruby-lang.org/en/downloads/) for instructions.
+
+* Another requirement for puml images on the website is having java on the system. See [here](https://www.java.com/en/) for instructions.
+
+* All of the requirements above are easily solved with a one-liner command on a tradition linux system. To be consistent with the server, try using Ubuntu in a VM.
+
+#### Building Process
+
+* You can then continue with cloning this repository.
+
+[to be completed]
 
 ### CI/CD Pipeline
 This repository is scheduled to re-build and deploy the website X times a day. This means content from the source repositories are pulled and website is built again accordingly. If documentation changes are pushed to one of the source repositories, it might not appear instantly once they are pushed, you have to wait until the website rebuilds automatically.
