@@ -20,8 +20,7 @@ content:
       start-paths: documentation/IDTA-01002-3
     - url: https://github.com/admin-shell-io/aas-specs-iec61360
       branches:
-      - IDTA-01003-a-3-0_antora_ref
-      - IDTA-01003-a-3-1_working
+      - IgGa/fix_pumls
       start-paths: documentation/IDTA-01003-a
     - url: https://github.com/admin-shell-io/aas-specs-aasx
       branches:
