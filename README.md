@@ -22,18 +22,13 @@ The documentation is dynamically generated
     - Go to action [Publish Website](https://github.com/admin-shell-io/aas-specs-antora/actions/workflows/publish.yml)
     - Trigger the action by clicking on "Run Workflow" in the right corner
 
-## PDF Versions of the Documentation Sources
-The automatic generation and deployment system also generates pdf versions of all sources. These are generated alongside the website at the same time. For the time being, you can access them in the website using the button.
-
 ## Contribution Guidelines
 Contributors should test changes locally before pushing to remote repositories to maintain the integrity of the documentation. If local testing is not feasible, or if you require assistance, please [open an issue](https://github.com/admin-shell-io/aas-specs-antora/issues) for detailed guidance or to request manual build privileges. While direct testing on the live website is possible, it's discouraged due to potential complications. The site is also automatically updated several times a day, allowing for a natural review of changes.
 
 ## Usage
-
 If you wish the set up this environment locally to generate the collective documentation or edit the due process to alter the results in the direction of your needs and desires, this section covers the steps and requirements in the process and aims to guide you broadly to ease the procedure. If you require more assistance or proper documentation along the way, you should make use of the official [Antora documentation](https://docs.antora.org/antora/latest/).
 
 ### Prerequisites
-
 Before proceeding, you are required to have the latest [Node.js LTS release](https://nodejs.org/en/download) installed on your Linux, Windows, or macOS machine. You can then follow the steps [here](https://docs.antora.org/antora/latest/install/install-antora/) to install Antora and set it up.
 
 ### Building Locally
@@ -41,7 +36,7 @@ Before proceeding, you are required to have the latest [Node.js LTS release](htt
 #### Prerequisites and Preliminary Steps
 * A prerequisite is having the latest Node.js LTS release on your Linux, Windows, or macOS machine. For reproducability and ease of use, please use Linux, MacOS or another Unix-like system. If you are on windows, consider using WSL. Directly running on windows might prove more difficult and tedious, since no package manager will be available for any of the following steps. See [here](https://nodejs.org/en/download/package-manager) for instructions.
 
-* In order to locally build the documentation website on your own, you have to make sure you have Antora command line interface (CLI) and the official Antora site generator installed. See [here](https://docs.antora.org/antora/latest/install/install-antora/) for instructions.
+* In order to locally build the documentation website on your own, you have to make sure you have Antora command line interface (CLI) and the official Antora site generator installed. See [here](https://docs.antora.org/antora/latest/install/install-antora/) for instructions. You may skip this step to install npm packages after cloning the repository.
 
 * In the following steps, Ruby will be required. Install ruby on your system and configure it for use for a non-root user. See [here](https://www.ruby-lang.org/en/downloads/) for instructions.
 
@@ -55,16 +50,89 @@ Before proceeding, you are required to have the latest [Node.js LTS release](htt
 
 * You can then continue with cloning this repository.
 
-[to be completed]
+```
+git clone git@github.com:rwth-iat/aas-specs-antora.git
+```
 
-### CI/CD Pipeline
-This repository is scheduled to re-build and deploy the website X times a day. This means content from the source repositories are pulled and website is built again accordingly. If documentation changes are pushed to one of the source repositories, it might not appear instantly once they are pushed, you have to wait until the website rebuilds automatically.
+* Assuming your system already satisfies the requirements mentioned, you can install the dependencies of this repository.
+```
+npm install
+```
 
-## Managing Antora Specs Documentation
+* Now, you should be able to run Antora locally.
+```
+npx antora antora-playbook.yml
+```
+
+* The website should generate. Pdf files may not generate at first. To resolve this issue
+```
+gem install bundler
+bundle install
+```
+
+* After this step, pdf files should generate too. If there are errors, make sure you satisfy all the requirements in the previous subsection.
+
+* Everything will be under ```/build```. This directory contains the website that is deployed to GitHub pages.
+
+#### The User Interface
+
+* The repository for the UI can be found in the playbook file. You can locally build a preview of the UI or build the release file yourself to test around. Instructions regarding this can be found in the UI repository.
+
+#### The PDF Files
+We use the antora/pdf-extension to generate PDF files alongside the web pages. We use our own [PDF Theme](pdf-theme.yml) to define our style and structure. The configuration file for the PDF generation process is the [antora-assembler.yml](antora-assembler.yml).
+
+The cover pages of these PDF files are not readily provided images. Tho, we use an [image on our cover pages](cover.pdf) as the background. Our goal is to embed as little as possible as part of this image. Document properties like the title, subtitle, date, author, etc. are displayed as text on top of this background image.
+
+We use a custom extension written in ruby. This can be seen in the file [extended.rb](extended.rb). This file is taken from the extension examples from the asciidoctor-pdf repository. If numbering of paragraphs is no longer required, this can be disabled by editing the [antora-assembler.yml](antora-assembler.yml). Deleting the option ```-r ./extended.rb``` after the command will disable this extension. Numbering of paragraphs is mainly for debug and review purposes.
+
+#### Schema Overview
+
+##### Key Concepts and Components
+* **AsciiDoc:** A lightweight markup language used for writing documentation. It allows you to create structured documents with headings, lists, tables, and more.
+
+* **Asciidoctor:** A Ruby-based processor that converts AsciiDoc files into various formats, such as HTML and PDF. It interprets the AsciiDoc markup and generates the final output.
+
+* **Asciidoctor PDF:** An extension of Asciidoctor that specifically converts AsciiDoc files into PDF format. It allows you to create printable versions of your documentation.
+
+* **Antora Assembler:** The component of Antora (as an extension) that assembles documentation from multiple sources (modules) into a cohesive PDF document or documents. It organizes the content, applies themes, and generates the final output.
+
+* **Deployment to GitHub Pages:** A method to host your generated documentation on GitHub Pages, making it accessible to users via a web URL.
+
+##### Workflow Overview
+
+* **Writing Documentation:** Authors write documentation in AsciiDoc format, organizing it into modules (e.g., user guides, API references).
+
+* **Processing with Antora:** When you run Antora, it uses the Antora assembler to gather all the AsciiDoc files from the specified modules. It processes these files, applying any themes or configurations defined in the Antora playbook (a YAML file that describes the site structure).
+
+* **Generating Output:** The assembler calls Asciidoctor to convert the AsciiDoc files into HTML. If you want to generate PDFs, it will also call Asciidoctor PDF to create those files.
+
+* **Building the Site:** The output (HTML and/or PDF) is organized into a structured site, ready for deployment.
+
+* **Deploying to GitHub Pages:** The generated HTML files can be pushed to a GitHub repository configured for GitHub Pages. This makes the documentation available online, where users can access it through a web browser.
+
+This workflow allows teams to maintain and publish documentation efficiently, ensuring that it is always up-to-date and accessible to users.
+
+#### The Structure and Schema in Diagrams
+
+In order to get a more comprehensive look at the structure of the Antora project, you can check the presentation slides and script for the talk [“Antora: Documentation Sites for Software Teams”](https://gitlab.com/opendevise/talks/docs-sites-for-software-teams), which includes some very explanatory diagrams. The following are diagrams that help illustrate the underlyaing scheme.
+
+![Structure_1](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/images/antora-pipeline-1.svg)
+
+See [Slide 19 from “Antora: Documentation Sites for Software Teams”](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/#19)
+
+![Structure_2](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/images/antora-pipeline-2.svg)
+
+See [Slide 21 from “Antora: Documentation Sites for Software Teams”](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/#21)
+
+![Structure_3](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/images/docs-project-structure.png)
+
+See [Slide 22 from “Antora: Documentation Sites for Software Teams”](https://devoxxuk-2019--opendevise-talks-docs-sites-for-software-teams.netlify.app/#22)
+
+#### Managing Antora Specs Documentation
 
 This guide provides a brief overview of how to manage documentation repositories (Doku-Repos) for Antora specs, including adding new repositories, structuring them appropriately, and manually triggering web documentation updates on GitHub.
 
-### Adding New Documentation Repositories for Antora
+##### Adding New Documentation Repositories for Antora
 This is as easy as changing the Antora playbook yml file. Again, this will require you having privileged access to the repository. If you are from the organization to manage the sources and the documentation etc., you may consider opening an issue here creating a pull request to add a new source repository. We will accomodate you through the process of how the formatting and other details are to be managed so that you will be in a position to take over this mechanism onto yourself should such time arrive.
 
 As a general introductory guide, refer to the original documentation you can find [here](https://docs.antora.org/antora/latest/playbook/content-source-url/).
@@ -107,12 +175,8 @@ docs/
 
 For a comprehensive guide on structuring your documentation for Antora, see [Antora's official documentation on directory structure](https://docs.antora.org/antora/latest/standard-directories/).
 
-## The PDF Files
-We use the antora/pdf-extension to generate PDF files alongside the web pages. We use our own [PDF Theme](pdf-theme.yml) to define our style and structure. The configuration file for the PDF generation process is the [antora-assembler.yml](antora-assembler.yml).
-
-The cover pages of these PDF files are not readily provided images. Tho, we use an [image on our cover pages](cover.pdf) as the background. Our goal is to embed as little as possible as part of this image. Document properties like the title, subtitle, date, author, etc. are displayed as text on top of this background image.
-
-We use a custom extension written in ruby. This can be seen in the file [extended.rb](extended.rb). This file is taken from the extension examples from the asciidoctor-pdf repository. If numbering of paragraphs is no longer required, this can be disabled by editing the [antora-assembler.yml](antora-assembler.yml). Deleting the option ```-r ./extended.rb``` after the command will disable this extension. Numbering of paragraphs is mainly for debug and review purposes.
+### CI/CD Pipeline
+This repository is scheduled to re-build and deploy the website X times a day. This means content from the source repositories are pulled and website is built again accordingly. If documentation changes are pushed to one of the source repositories, it might not appear instantly once they are pushed, you have to wait until the website rebuilds automatically.
 
 ## License
 This project is under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
