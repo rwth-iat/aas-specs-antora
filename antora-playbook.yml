@@ -11,7 +11,7 @@ content:
       start-paths: .
     - url: https://github.com/rwth-iat/aas-specs
       branches:
-      - IgGa/integrate_pumls_test
+      - IgGa/add_mappings
       start-paths: documentation/IDTA-01001
     - url: https://github.com/admin-shell-io/aas-specs-api
       branches:
