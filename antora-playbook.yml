@@ -9,9 +9,9 @@ content:
     - url: .
       branches: HEAD
       start-paths: .
-    - url: /mnt/c/Users/igor/PycharmProjects/aas-specs
+    - url: https://github.com/admin-shell-io/aas-specs
       branches:
-        - IgGa/minorFixesTest
+        - IDTA-01001-3-1_working
       start-paths: documentation/IDTA-01001
 #    - url: /mnt/c/Users/igor/PycharmProjects/aas-specs-api
 #      branches:

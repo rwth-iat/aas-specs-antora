@@ -60,6 +60,10 @@ jobs:
         bundler-cache: true
     - name: Install Graphviz
       run: sudo apt update && sudo apt install -y graphviz
+    - name: List files
+      run: ls .
+    - name: List files in parent directory
+      run: ls ..
     - name: Generate Site
       run: npx antora antora-playbook.yml
     - name: List files
