@@ -10,6 +10,7 @@ title-page:
   subtitle:
     font_size: 28
     font_color: C6C6C6
+    font-style: Normal
     line_height: 1
   background-image: image:cover.pdf[fit=cover]
  
