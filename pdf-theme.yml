@@ -39,7 +39,10 @@ heading:
   margin-bottom: $vertical-spacing
 
 link:
-  font-color: #5AACF6
+  font-color: #0029CC
+
+link-hover:
+  font-color: #FF500F
   
 example:
   border_radius: 0
