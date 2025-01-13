@@ -9,8 +9,8 @@ title-page:
     line_height: 0.9
   subtitle:
     font_size: 28
-    font_color: C6C6C6
-    font-style: Normal
+    font_color: FFFFFF
+    font_style: Normal
     line_height: 1
   background-image: image:cover.pdf[fit=cover]
  
@@ -37,16 +37,11 @@ heading:
   font-size: 14
   line-height: 1.15
   margin-bottom: $vertical-spacing
-  
-link:
-  font-color: #404040
-  line-height: 1.15
     
 example:
   border_radius: 0
   border_width: 0.75
   border_color: #e5f0f7
-  font-color: #404040
   background_color: #e5f0f7
   padding: 12
   
