@@ -52,6 +52,7 @@ antora:
   - '@antora/pdf-extension'
 
 asciidoc:
+  sourcemap: true
   extensions:
     - asciidoctor-kroki
   attributes:
