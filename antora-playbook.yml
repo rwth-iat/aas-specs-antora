@@ -31,6 +31,9 @@ content:
       branches:
       - documentation
       start-paths: documentation/IDTA-01004
+    - url: https://github.com/admin-shell-io/submodel-templates
+      branches:
+      - template-documentation
       
 ui:
   bundle:
