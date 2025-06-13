@@ -60,6 +60,17 @@ jobs:
         bundler-cache: true
     - name: Install Graphviz
       run: sudo apt update && sudo apt install -y graphviz
+    - name: Generate Site to fetch all repos
+      run: npx antora --fetch antora-playbook.yml
+    - name: Show all files in the directory
+      run: ls -R
+    - name: Run a preprocessing script for PUML files
+      run: |
+        echo "Running pre-processing script..."
+        # Add your pre-processing commands here
+        # For example, you might want to run a custom script or command
+        # that modifies the content before the final build.
+        # This is a placeholder for your actual pre-processing logic.
     - name: Generate Site
       run: npx antora antora-playbook.yml
     - name: Upload Artifacts

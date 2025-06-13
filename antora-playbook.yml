@@ -24,9 +24,6 @@ ui:
       static_files:
       - .nojekyll
   - path: .nojekyll
-    
-runtime:
-  fetch: true
   
 antora:
   extensions:
