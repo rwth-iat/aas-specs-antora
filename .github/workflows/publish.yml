@@ -67,7 +67,6 @@ jobs:
     - name: Run a preprocessing script for PUML files
       run: |
         echo "Running pre-processing script..."
-        # Add your pre-processing commands here
         # This is a placeholder for your actual pre-processing logic.
     - name: Generate Site
       run: npx antora antora-playbook.yml
