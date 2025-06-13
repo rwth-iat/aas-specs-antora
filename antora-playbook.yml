@@ -13,6 +13,7 @@ content:
       branches:
       - IgGa/puml_preprocessing_test
       start-paths: documentation/IDTA-01001
+      worktrees: true
 
 ui:
   bundle:
