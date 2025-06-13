@@ -11,31 +11,9 @@ content:
       start-paths: .
     - url: https://github.com/rwth-iat/aas-specs
       branches:
-      - IgGa/add_mappings
+      - IgGa/puml_preprocessing_test
       start-paths: documentation/IDTA-01001
-    - url: https://github.com/admin-shell-io/aas-specs-api
-      branches:
-      - IDTA-01002-3-0_antora_ref
-      - IgGa/integrate_pumls
-      start-paths: documentation/IDTA-01002-3
-    - url: https://github.com/admin-shell-io/aas-specs-iec61360
-      branches:
-      - IgGa/fix_pumls
-      start-paths: documentation/IDTA-01003-a
-    - url: https://github.com/admin-shell-io/aas-specs-aasx
-      branches:
-      - IDTA-01005-3-0_antora_ref
-      - IDTA-01005-3-1_working
-      start-paths: documentation/IDTA-01005
-    - url: https://github.com/rwth-iat/aas-specs-security
-      branches:
-      - documentation
-      start-paths: documentation/IDTA-01004
-    - url: https://github.com/admin-shell-io/submodel-templates
-      branches:
-      - template-documentation
-      start-paths: documentation-template/*/1/0/docs
-      
+
 ui:
   bundle:
     url: https://github.com/rwth-iat/aas-specs-antora-ui/releases/latest/download/ui-bundle.zip
@@ -63,5 +41,6 @@ asciidoc:
     xrefstyle: short
     kroki-server-url: http://localhost:8000
     kroki-fetch-diagram: true
-    kroki-plantuml-include: https://raw.githubusercontent.com/admin-shell-io/aas-specs-antora/refs/heads/main/plantuml/puml-theme-idta.puml
-    kroki-plantuml-include-paths: ./IDTA-01001/modules/ROOT/partials/diagrams:./documentation/IDTA-01001/modules/ROOT/partials/diagrams:./IDTA-01001/modules/ROOT/partials/diagrams/:./documentation/IDTA-01001/modules/ROOT/partials/diagrams/
+    plantuml-format: svg
+    kroki-plantuml-include: https://raw.githubusercontent.com/admin-shell-io/aas-specifications/main/plantuml/puml-theme-idta.puml
+    pdf-theme: ./pdf-theme.yml
