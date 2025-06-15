@@ -8,7 +8,7 @@ function transformConstraints(source, docfile) {
   const aasdMatches = (source.match(/^:aasd(\d+):\s*pass:q\[\[underline\]#Constraint AASd-(\d+):#\s*(.*?)\]$/gm) || []);
   if (aasdMatches.length > 0) {
     transformedSource = transformedSource.replace(
-      /^plantuml::/gm,
+      "plantuml::",
       myString
     );
   }
