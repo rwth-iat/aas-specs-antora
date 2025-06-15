@@ -4,8 +4,6 @@ asciidoc:
   extensions:
     - modules/extensions/rewrite-constraints-ext.js
   attributes:
-    allow-uri-read: ''
-    kroki-fetch-diagram: ~
     source-highlighter: rouge
     pdf-theme: pdf-theme.yml
 build:
