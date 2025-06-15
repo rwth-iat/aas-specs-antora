@@ -62,14 +62,6 @@ jobs:
       run: sudo apt update && sudo apt install -y graphviz
     - name: Generate Site to fetch all repos
       run: npx antora --fetch antora-playbook.yml
-    - name: Show all files in the directory
-      run: ls -R
-    - name: Run a preprocessing script for PUML files
-      run: |
-        echo "Running pre-processing script..."
-        # This is a placeholder for your actual pre-processing logic.
-    - name: Generate Site
-      run: npx antora antora-playbook.yml
     - name: Upload Artifacts
       uses: actions/upload-pages-artifact@v3
       with:
