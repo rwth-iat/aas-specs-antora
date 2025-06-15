@@ -32,7 +32,7 @@ runtime:
 antora:
   extensions:
   - '@antora/lunr-extension'
-  #- '@antora/pdf-extension'
+  - '@antora/pdf-extension'
 
 asciidoc:
   sourcemap: true
