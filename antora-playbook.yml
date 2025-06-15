@@ -40,8 +40,8 @@ asciidoc:
     - asciidoctor-kroki
   attributes:
     xrefstyle: short
-    kroki-server-url: http://localhost:8000
     kroki-fetch-diagram: true
+    kroki-server-url: http://localhost:8000
     plantuml-format: svg
     kroki-plantuml-include: ./plantuml/puml-theme-idta.puml
     pdf-theme: ./pdf-theme.yml
