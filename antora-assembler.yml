@@ -7,5 +7,5 @@ asciidoc:
     source-highlighter: rouge
     pdf-theme: pdf-theme.yml
 build:
-  command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-kroki
+  command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-kroki --sourcemap --trace
   keep_aggregate_source: true
