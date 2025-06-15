@@ -8,5 +8,5 @@ asciidoc:
     pdf-theme: pdf-theme.yml
 build:
   command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-diagram --sourcemap --trace
-  keep_aggregate_source: true
   qualify_exports: true
+  keep_aggregate_source: true
