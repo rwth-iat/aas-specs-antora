@@ -3,12 +3,13 @@ console.log('Loading rewrite-constraints-ext.js extension...');
 
 function transformConstraints(source, docfile) {
   let transformedSource = source;
+  const myString = "some_replacement_string";
 
   const aasdMatches = (source.match(/^:aasd(\d+):\s*pass:q\[\[underline\]#Constraint AASd-(\d+):#\s*(.*?)\]$/gm) || []);
   if (aasdMatches.length > 0) {
     transformedSource = transformedSource.replace(
       /^plantuml::/gm,
-      /^randomrandom/gm
+      myString
     );
   }
   
