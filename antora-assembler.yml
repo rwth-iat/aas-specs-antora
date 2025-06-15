@@ -1,12 +1,14 @@
 root_level: 0
 component_versions: '**'
 asciidoc:
+  extensions:
+    - modules/extensions/rewrite-constraints-ext.js
   attributes:
     allow-uri-read: ''
     kroki-fetch-diagram: ~
     source-highlighter: rouge
     pdf-theme: pdf-theme.yml
 build:
-  command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-kroki --sourcemap --trace
+  command: bundle exec asciidoctor-pdf -r ./extended.rb -r asciidoctor-diagram --sourcemap --trace
   keep_aggregate_source: true
   qualify_exports: true
